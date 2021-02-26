@@ -6,14 +6,15 @@ import org.openqa.selenium.WebDriver;
 import pages.Base;
 import pages.LoginPage;
 import utilities.Driver;
+import utilities.ReadFromConfigPropertiesFile;
 
 public class Background extends Base {
     LoginPage loginPage = new LoginPage();
     WebDriver driver = Driver.getDriver();
 
     @Given("I navigate to WebSite {string}")
-    public void iNavigateToWebSite(String url) {
-        driver.get(url);
+    public void iNavigateToWebSite(String homepage) {
+        driver.get(ReadFromConfigPropertiesFile.getValueFor(homepage));
         driver.manage().window().maximize();
 
     }

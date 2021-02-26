@@ -1,7 +1,7 @@
 Feature: I can create an employee with minimum requirements and check if we can update it
 
   Background:
-    Given I navigate to WebSite "https://test.campus.techno.study/"
+    Given I navigate to WebSite "homepage"
     And I login in using username "daulet2030@gmail.com" and login "TechnoStudy123@"
 
 
